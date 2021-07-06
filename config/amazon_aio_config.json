@@ -1,18 +1,304 @@
 {
   "items": [
     {
-      "asins": ["B0160U60XO"],
-      "min-price": 2,
-      "max-price": 6,
-      "condition": "New",
-      "proxy": "https://OR1449719690:7a30g6pv@50.114.163.149:8510"
+      "asins": ["B08HH5WF97"],
+      "min-price": 500,
+      "max-price": 1200,
+      "condition": "Any"
     },
     {
-      "asins": ["B006JG471M"],
-      "min-price": 0,
-      "max-price": 0.5,
-      "condition": "New",
-      "proxy": "https://OR1449719690:7a30g6pv@50.114.165.1:7757"
+      "asins": ["B08L8JNTXQ"],
+      "min-price": 500,
+      "max-price": 850,
+      "condition": "Any"
+    },
+    {
+      "asins": ["B08W8DGK3X"],
+      "min-price": 350,
+      "max-price": 700,
+      "condition": "Any"
+    },
+    {
+      "asins": ["B08L8KC1J7"],
+      "min-price": 500,
+      "max-price": 850,
+      "condition": "Any"
+    },
+    {
+      "asins": ["B08L8L9TCZ"],
+      "min-price": 500,
+      "max-price": 850,
+      "condition": "Any"
+    },
+    {
+      "asins": ["B08MT6B58K"],
+      "min-price": 500,
+      "max-price": 850,
+      "condition": "Any"
+    },
+    {
+      "asins": ["B08WGTL4CW"],
+      "min-price": 350,
+      "max-price": 700,
+      "condition": "Any"
+    },
+    {
+      "asins": ["B08LW46GH2"],
+      "min-price": 500,
+      "max-price": 850,
+      "condition": "Any"
+    },
+    {
+      "asins": ["B08J6F174Z"],
+      "min-price": 500,
+      "max-price": 1200,
+      "condition": "Any"
+    },
+    {
+      "asins": ["B083Z7TR8Z"],
+      "min-price": 350,
+      "max-price": 800,
+      "condition": "Any"
+    },
+    {
+      "asins": ["B08HH5WF97"],
+      "min-price": 500,
+      "max-price": 1200,
+      "condition": "Any"
+    },
+    {
+      "asins": ["B08L8JNTXQ"],
+      "min-price": 500,
+      "max-price": 850,
+      "condition": "Any"
+    },
+    {
+      "asins": ["B08W8DGK3X"],
+      "min-price": 350,
+      "max-price": 700,
+      "condition": "Any"
+    },
+    {
+      "asins": ["B08L8KC1J7"],
+      "min-price": 500,
+      "max-price": 850,
+      "condition": "Any"
+    },
+    {
+      "asins": ["B08L8L9TCZ"],
+      "min-price": 500,
+      "max-price": 850,
+      "condition": "Any"
+    },
+    {
+      "asins": ["B08MT6B58K"],
+      "min-price": 500,
+      "max-price": 850,
+      "condition": "Any"
+    },
+    {
+      "asins": ["B08WGTL4CW"],
+      "min-price": 350,
+      "max-price": 700,
+      "condition": "Any"
+    },
+    {
+      "asins": ["B08LW46GH2"],
+      "min-price": 500,
+      "max-price": 850,
+      "condition": "Any"
+    },
+    {
+      "asins": ["B08J6F174Z"],
+      "min-price": 500,
+      "max-price": 1200,
+      "condition": "Any"
+    },
+    {
+      "asins": ["B083Z7TR8Z"],
+      "min-price": 350,
+      "max-price": 800,
+      "condition": "Any"
+    },
+    {
+      "asins": ["B08HH5WF97"],
+      "min-price": 500,
+      "max-price": 1200,
+      "condition": "Any"
+    },
+    {
+      "asins": ["B08L8JNTXQ"],
+      "min-price": 500,
+      "max-price": 850,
+      "condition": "Any"
+    },
+    {
+      "asins": ["B08W8DGK3X"],
+      "min-price": 350,
+      "max-price": 700,
+      "condition": "Any"
+    },
+    {
+      "asins": ["B08L8KC1J7"],
+      "min-price": 500,
+      "max-price": 850,
+      "condition": "Any"
+    },
+    {
+      "asins": ["B08L8L9TCZ"],
+      "min-price": 500,
+      "max-price": 850,
+      "condition": "Any"
+    },
+    {
+      "asins": ["B08MT6B58K"],
+      "min-price": 500,
+      "max-price": 850,
+      "condition": "Any"
+    },
+    {
+      "asins": ["B08WGTL4CW"],
+      "min-price": 350,
+      "max-price": 700,
+      "condition": "Any"
+    },
+    {
+      "asins": ["B08LW46GH2"],
+      "min-price": 500,
+      "max-price": 850,
+      "condition": "Any"
+    },
+    {
+      "asins": ["B08J6F174Z"],
+      "min-price": 500,
+      "max-price": 1200,
+      "condition": "Any"
+    },
+    {
+      "asins": ["B083Z7TR8Z"],
+      "min-price": 350,
+      "max-price": 800,
+      "condition": "Any"
+    },
+    {
+      "asins": ["B08HH5WF97"],
+      "min-price": 500,
+      "max-price": 1200,
+      "condition": "Any"
+    },
+    {
+      "asins": ["B08L8JNTXQ"],
+      "min-price": 500,
+      "max-price": 850,
+      "condition": "Any"
+    },
+    {
+      "asins": ["B08W8DGK3X"],
+      "min-price": 350,
+      "max-price": 700,
+      "condition": "Any"
+    },
+    {
+      "asins": ["B08L8KC1J7"],
+      "min-price": 500,
+      "max-price": 850,
+      "condition": "Any"
+    },
+    {
+      "asins": ["B08L8L9TCZ"],
+      "min-price": 500,
+      "max-price": 850,
+      "condition": "Any"
+    },
+    {
+      "asins": ["B08MT6B58K"],
+      "min-price": 500,
+      "max-price": 850,
+      "condition": "Any"
+    },
+    {
+      "asins": ["B08WGTL4CW"],
+      "min-price": 350,
+      "max-price": 700,
+      "condition": "Any"
+    },
+    {
+      "asins": ["B08LW46GH2"],
+      "min-price": 500,
+      "max-price": 850,
+      "condition": "Any"
+    },
+    {
+      "asins": ["B08J6F174Z"],
+      "min-price": 500,
+      "max-price": 1200,
+      "condition": "Any"
+    },
+    {
+      "asins": ["B083Z7TR8Z"],
+      "min-price": 350,
+      "max-price": 800,
+      "condition": "Any"
+    },
+    {
+      "asins": ["B08HH5WF97"],
+      "min-price": 500,
+      "max-price": 1200,
+      "condition": "Any"
+    },
+    {
+      "asins": ["B08L8JNTXQ"],
+      "min-price": 500,
+      "max-price": 850,
+      "condition": "Any"
+    },
+    {
+      "asins": ["B08W8DGK3X"],
+      "min-price": 350,
+      "max-price": 700,
+      "condition": "Any"
+    },
+    {
+      "asins": ["B08L8KC1J7"],
+      "min-price": 500,
+      "max-price": 850,
+      "condition": "Any"
+    },
+    {
+      "asins": ["B08L8L9TCZ"],
+      "min-price": 500,
+      "max-price": 850,
+      "condition": "Any"
+    },
+    {
+      "asins": ["B08MT6B58K"],
+      "min-price": 500,
+      "max-price": 850,
+      "condition": "Any"
+    },
+    {
+      "asins": ["B08WGTL4CW"],
+      "min-price": 350,
+      "max-price": 700,
+      "condition": "Any"
+    },
+    {
+      "asins": ["B08LW46GH2"],
+      "min-price": 500,
+      "max-price": 850,
+      "condition": "Any"
+    },
+    {
+      "asins": ["B08J6F174Z"],
+      "min-price": 500,
+      "max-price": 1200,
+      "condition": "Any"
+    },
+    {
+      "asins": ["B083Z7TR8Z"],
+      "min-price": 350,
+      "max-price": 800,
+      "condition": "Any"
     }
   ],
   "amazon_domain": "smile.amazon.com"

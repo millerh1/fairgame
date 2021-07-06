@@ -97,7 +97,7 @@ PDP_PATH = "/dp/"
 REALTIME_INVENTORY_PATH = "gp/aod/ajax?asin="
 
 CONFIG_FILE_PATH = "config/amazon_requests_config.json"
-PROXY_FILE_PATH = "config/proxies.tmp.json"
+PROXY_FILE_PATH = "config/proxies.json"
 STORE_NAME = "Amazon"
 DEFAULT_MAX_TIMEOUT = 10
 
@@ -139,7 +139,6 @@ class AmazonMonitoringHandler(BaseStoreHandler):
         self.amazon_config = amazon_config
         ua = UserAgent()
 
-
         if use_proxies:
             self.proxies = get_proxies(path=PROXY_FILE_PATH)
         else:
@@ -148,13 +147,10 @@ class AmazonMonitoringHandler(BaseStoreHandler):
         # Initialize the Session we'll use for stock checking
         log.debug("Initializing Monitoring Sessions")
         self.sessions_list: Optional[List[AmazonMonitor]] = []
-        print(item_list)
         for idx in range(len(item_list)):
-
-            print(item_list[idx])
-            print("Using proxies!!!")
-            print(item_list[idx].proxy)
-            connector = ProxyConnector.from_url(item_list[idx].proxy)
+            connector = None
+            if self.proxies and idx < len(self.proxies):
+                connector = ProxyConnector.from_url(self.proxies[idx]["https"])
             self.sessions_list.append(
                 AmazonMonitor(
                     headers=HEADERS,
@@ -192,6 +188,7 @@ class AmazonMonitor(aiohttp.ClientSession):
         self.item = item
         self.amazon_config = amazon_config
         self.domain = urlparse(self.item.furl.url).netloc
+
         self.delay = delay
         if item.purchase_delay > 0:
             self.delay = 20
@@ -201,7 +198,7 @@ class AmazonMonitor(aiohttp.ClientSession):
     def assign_config(self, azn_config):
         self.amazon_config = azn_config
 
-    def assign_delay(self, delay: float = 7):
+    def assign_delay(self, delay: float = 5):
         self.delay = delay
 
     def assign_item(self, item: FGItem):
@@ -231,8 +228,8 @@ class AmazonMonitor(aiohttp.ClientSession):
         delay = self.delay
         end_time = time.time() + delay
         status, response_text = await self.aio_get(url=self.item.furl.url)
-        print(self.item.id)
-        save_html_response("stock-check" + self.item.id, status, response_text)
+
+        save_html_response("stock-check", status, response_text)
 
         # do this after each request
         fail_counter = check_fail(status=status, fail_counter=fail_counter)
@@ -294,7 +291,7 @@ class AmazonMonitor(aiohttp.ClientSession):
             await wait_timer(end_time)
             end_time = time.time() + delay
             status, response_text = await self.aio_get(url=self.item.furl.url)
-            save_html_response("stock-check-" + self.item.id, status, response_text)
+            save_html_response("stock-check", status, response_text)
             # do this after each request
             fail_counter = check_fail(status=status, fail_counter=fail_counter)
             if fail_counter == -1:

@@ -392,7 +392,6 @@ class AmazonCheckoutHandler(BaseStoreHandler):
             log.debug(f"Other error encountered while loading page: {e}")
 
     async def checkout_worker(self, queue: asyncio.Queue):
-        print("Checkout ")
         log.debug("Checkout Task Started")
         log.debug("Logging in and pulling cookies from Selenium")
         cookies = self.pull_cookies()
@@ -408,12 +407,9 @@ class AmazonCheckoutHandler(BaseStoreHandler):
         save_html_response("session-get", resp.status, html_text)
         while True:
             log.debug("Checkout task waiting for item in queue")
-            print("HER 0 ")
-            print(queue)
             qualified_seller = await queue.get()
             queue.task_done()
             if not qualified_seller:
-                print("NBOT QUAL")
                 continue
             start_time = time.time()
             TURBO_INITIATE_MAX_RETRY = 50
@@ -427,9 +423,7 @@ class AmazonCheckoutHandler(BaseStoreHandler):
                     qualified_seller=qualified_seller,
                 )
                 retry += 1
-            print("HERE 1")
             if pid and anti_csrf:
-                print("HERE 2")
                 if await turbo_checkout(
                     domain=self.amazon_domain,
                     s=self.checkout_session,
@@ -509,22 +503,10 @@ async def turbo_initiate(
         "offerListing.1": qualified_seller.offering_id,
         "quantity.1": "1",
     }
-
-    # TEST
-    # payload_inputs['offerListing.1'] = "%2Bh6UbMUNiEWMy%2F96uPQ5dXGuj2n6juNqdqUSdGSit8q6szPcTbk1tQAS4%2BPIuN%2BIH9nP6WjY0pujutR%2BRGX1Zkd2VS3XX3lQc9PfMBE6HLL5E%2BUm3jP05WgYh2QcdUXmfNZbZp7XNH1IjGfSb50agg%3D%3D"
-    print(payload_inputs)
-
     retry = 0
     MAX_RETRY = 5
     captcha_element = True  # to initialize loop
-    print(s)
-    print(url)
     status, text = await aio_post(client=s, url=url, data=payload_inputs)
-    print("HELLO WORLD")
-    print(status)
-
-    print(text)
-
     save_html_response("turbo-initiate", status, text)
     tree: Optional[html.HtmlElement] = None
     while retry < MAX_RETRY and captcha_element:
